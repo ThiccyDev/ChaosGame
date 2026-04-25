@@ -4,10 +4,13 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <random>
 
 //Make the code easier to type with "using namespace"
 using namespace sf;
 using namespace std;
+
+void GeneratePoint();
 
 int main()
 {
@@ -18,6 +21,11 @@ int main()
 
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
+
+	Vector2f selectedPoint;
+	bool pointsSetUp = false;
+
+	srand(time(0));
 
 	while (window.isOpen())
 	{
@@ -34,7 +42,7 @@ int main()
 				// Quit the game when the window is closed
 				window.close();
 			}
-			if (event.type == sf::Event::MouseButtonPressed)
+			if (event.type == sf::Event::MouseButtonPressed && !pointsSetUp)
 			{
 				if (event.mouseButton.button == sf::Mouse::Left)
 				{
@@ -49,7 +57,9 @@ int main()
 					else if (points.size() == 0)
 					{
 						///fourth click
-						vertices.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
+						selectedPoint = Vector2f(event.mouseButton.x, event.mouseButton.y);
+						vertices.push_back(selectedPoint);
+						pointsSetUp = true;
 					}
 				}
 			}
@@ -88,4 +98,15 @@ int main()
 		///TODO:  Draw points
 		window.display();
 	}
+}
+
+void GeneratePoint()
+{
+	/* 1. Get random triangle point.
+	*  2. Find midpoint between selectedPoint and triangle point.
+	*  3. Add a new point there.
+	*  4. Set selectedPoint to the newPoint.
+	*/
+
+	//Vector2f randomPoint = points[rand() % 3]
 }
