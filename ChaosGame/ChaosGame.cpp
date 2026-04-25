@@ -12,6 +12,10 @@ using namespace std;
 
 void GeneratePoint(vector<Vector2f>&, vector<Vector2f>&);
 
+void IntializeText(Text& text, const Font& textFont, string textString, int size, Color color);
+
+void SetOriginAndPosition(Text& text, Vector2f position);
+
 int main()
 {
 	// Create a video mode object
@@ -23,6 +27,18 @@ int main()
 	vector<Vector2f> points;
 	
 	bool pointsSetUp = false;
+
+	Font font;
+	font.loadFromFile("fonts\\Jersey25-Regular.ttf");
+
+	sf::Text beginText;
+	sf::Text pointText;
+	IntializeText(beginText, font, "Choose 3 Points to Create the Triangle", 50, Color::White);
+	IntializeText(pointText, font, "Choose a Final Point to Start", 50, Color::White);
+	SetOriginAndPosition(beginText, Vector2f(1920 / 2.0f, 0));
+	SetOriginAndPosition(pointText, Vector2f(1920 / 2.0f, 0));
+
+
 
 	srand(time(0));
 
@@ -121,4 +137,19 @@ void GeneratePoint(vector<Vector2f>& vertices, vector<Vector2f>& points)
 	Vector2f midPoint = Vector2f(randomPoint.x / 2.0f + points.at(points.size() - 1).x / 2.0f, randomPoint.y / 2.0f + points.at(points.size() - 1).y / 2.0f);
 
 	points.push_back(midPoint);
+}
+
+void IntializeText(Text& text, const Font& textFont, string textString, int size, Color color) {
+
+	text.setFont(textFont);
+	text.setString(textString);
+	text.setCharacterSize(size);
+	text.setFillColor(color);
+}
+
+void SetOriginAndPosition(Text& text, Vector2f position) {
+
+	FloatRect rect = text.getLocalBounds();
+	text.setOrigin(Vector2f(rect.left + rect.width / 2.0f, rect.top + rect.height / 2.0f));
+	text.setPosition(position);
 }
