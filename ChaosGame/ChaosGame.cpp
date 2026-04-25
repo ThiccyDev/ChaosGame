@@ -10,7 +10,7 @@
 using namespace sf;
 using namespace std;
 
-void GeneratePoint();
+void GeneratePoint(vector<Vector2f>&, vector<Vector2f>&);
 
 int main()
 {
@@ -21,8 +21,7 @@ int main()
 
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
-
-	Vector2f selectedPoint;
+	
 	bool pointsSetUp = false;
 
 	srand(time(0));
@@ -57,8 +56,7 @@ int main()
 					else if (points.size() == 0)
 					{
 						///fourth click
-						selectedPoint = Vector2f(event.mouseButton.x, event.mouseButton.y);
-						vertices.push_back(selectedPoint);
+						points.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
 						pointsSetUp = true;
 					}
 				}
@@ -74,12 +72,14 @@ int main()
 		****************************************
 		*/
 
-		if (points.size() > 0)
+		if (pointsSetUp)
 		{
 			///generate more point(s)
 			///select random vertex
 			///calculate midpoint between random vertex and the last point in the vector
 			///push back the newly generated coord.
+			
+			GeneratePoint(vertices, points);
 		}
 
 		/*
@@ -96,11 +96,18 @@ int main()
 			window.draw(rect);
 		}
 		///TODO:  Draw points
+		for (int i = 0; i < points.size(); i++)
+		{
+			RectangleShape rect(Vector2f(10, 10));
+			rect.setPosition(Vector2f(points[i].x, points[i].y));
+			rect.setFillColor(Color::Red);
+			window.draw(rect);
+		}
 		window.display();
 	}
 }
 
-void GeneratePoint()
+void GeneratePoint(vector<Vector2f>& vertices, vector<Vector2f>& points)
 {
 	/* 1. Get random triangle point.
 	*  2. Find midpoint between selectedPoint and triangle point.
@@ -108,5 +115,10 @@ void GeneratePoint()
 	*  4. Set selectedPoint to the newPoint.
 	*/
 
-	//Vector2f randomPoint = points[rand() % 3]
+	Vector2f randomPoint = vertices.at(rand() % 3);
+
+	// find midpoint
+	Vector2f midPoint = Vector2f(randomPoint.x / 2.0f + points.at(points.size() - 1).x / 2.0f, randomPoint.y / 2.0f + points.at(points.size() - 1).y / 2.0f);
+
+	points.push_back(midPoint);
 }

@@ -1,12 +1,23 @@
 ﻿  ChaosGame.cpp
-C:\Users\Peter\source\repos\ChaosGame\ChaosGame.cpp(47,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Peter\source\repos\ChaosGameClone\ChaosGame\ChaosGame.cpp(27,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Peter\source\repos\ChaosGameClone\ChaosGame\ChaosGame.cpp(54,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Peter\source\repos\ChaosGame\ChaosGame.cpp(47,52): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Peter\source\repos\ChaosGameClone\ChaosGame\ChaosGame.cpp(54,52): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-  ChaosGame.vcxproj -> C:\Users\Peter\source\repos\ChaosGame\x64\Debug\ChaosGame.exe
+C:\Users\Peter\source\repos\ChaosGameClone\ChaosGame\ChaosGame.cpp(59,71): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Peter\source\repos\ChaosGameClone\ChaosGame\ChaosGame.cpp(59,50): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  ChaosGame.vcxproj -> C:\Users\Peter\source\repos\ChaosGameClone\ChaosGame\x64\Debug\ChaosGame.exe
