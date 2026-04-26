@@ -12,9 +12,9 @@ using namespace std;
 
 void GeneratePoint(vector<Vector2f>&, vector<Vector2f>&);
 
-void IntializeText(Text& text, const Font& textFont, string textString, int size, Color color);
+void IntializeText(Text& text, const Font& textFont, string textString, int textSize, Color textColor);
 
-void SetOriginAndPosition(Text& text, Vector2f position);
+void SetOriginAndPosition(Text& text);
 
 int main()
 {
@@ -27,18 +27,17 @@ int main()
 	vector<Vector2f> points;
 	
 	bool pointsSetUp = false;
+	bool vertexFinished = false;
 
 	Font font;
 	font.loadFromFile("fonts\\Jersey25-Regular.ttf");
 
 	sf::Text beginText;
 	sf::Text pointText;
-	IntializeText(beginText, font, "Choose 3 Points to Create the Triangle", 50, Color::White);
+	IntializeText(beginText, font, "Choose 3 Points to Create a Triangle", 50, Color::White);
 	IntializeText(pointText, font, "Choose a Final Point to Start", 50, Color::White);
-	SetOriginAndPosition(beginText, Vector2f(1920 / 2.0f, 0));
-	SetOriginAndPosition(pointText, Vector2f(1920 / 2.0f, 0));
-
-
+	SetOriginAndPosition(beginText);
+	SetOriginAndPosition(pointText);
 
 	srand(time(0));
 
@@ -68,6 +67,9 @@ int main()
 					if (vertices.size() < 3)
 					{
 						vertices.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
+
+						//checks if all vertices are complete
+						if (vertices.size() == 3) { vertexFinished = true; }
 					}
 					else if (points.size() == 0)
 					{
@@ -104,6 +106,12 @@ int main()
 		****************************************
 		*/
 		window.clear();
+		if (!vertexFinished) {
+			window.draw(beginText);
+		}
+		else if (!pointsSetUp) {
+			window.draw(pointText);
+		}
 		for (int i = 0; i < vertices.size(); i++)
 		{
 			RectangleShape rect(Vector2f(10, 10));
@@ -139,17 +147,17 @@ void GeneratePoint(vector<Vector2f>& vertices, vector<Vector2f>& points)
 	points.push_back(midPoint);
 }
 
-void IntializeText(Text& text, const Font& textFont, string textString, int size, Color color) {
+void IntializeText(Text& text, const Font& textFont, string textString, int textSize, Color textColor) {
 
 	text.setFont(textFont);
 	text.setString(textString);
-	text.setCharacterSize(size);
-	text.setFillColor(color);
+	text.setCharacterSize(textSize);
+	text.setFillColor(textColor);
 }
 
-void SetOriginAndPosition(Text& text, Vector2f position) {
+void SetOriginAndPosition(Text& text) {
 
 	FloatRect rect = text.getLocalBounds();
 	text.setOrigin(Vector2f(rect.left + rect.width / 2.0f, rect.top + rect.height / 2.0f));
-	text.setPosition(position);
+	text.setPosition(1920 / 2.0f, rect.height / 2.0f + 20);
 }

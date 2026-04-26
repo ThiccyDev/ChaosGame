@@ -1,23 +1,23 @@
 ﻿  ChaosGame.cpp
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(29,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(56,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(56,73): warning C4244:         with
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(56,73): warning C4244:         [
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(56,73): warning C4244:             T=float
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(56,73): warning C4244:         ]
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(56,52): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(56,52): warning C4244:         with
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(56,52): warning C4244:         [
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(56,52): warning C4244:             T=float
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(56,52): warning C4244:         ]
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(61,71): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(61,71): warning C4244:         with
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(61,71): warning C4244:         [
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(61,71): warning C4244:             T=float
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(61,71): warning C4244:         ]
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(61,50): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(61,50): warning C4244:         with
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(61,50): warning C4244:         [
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(61,50): warning C4244:             T=float
-C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(61,50): warning C4244:         ]
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(42,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(69,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(69,73): warning C4244:         with
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(69,73): warning C4244:         [
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(69,73): warning C4244:             T=float
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(69,73): warning C4244:         ]
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(69,52): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(69,52): warning C4244:         with
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(69,52): warning C4244:         [
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(69,52): warning C4244:             T=float
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(69,52): warning C4244:         ]
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(77,71): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(77,71): warning C4244:         with
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(77,71): warning C4244:         [
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(77,71): warning C4244:             T=float
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(77,71): warning C4244:         ]
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(77,50): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(77,50): warning C4244:         with
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(77,50): warning C4244:         [
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(77,50): warning C4244:             T=float
+C:\Users\rajda\source\repos\ChaosGameProject\ChaosGame\ChaosGame.cpp(77,50): warning C4244:         ]
   ChaosGame.vcxproj -> C:\Users\rajda\Source\Repos\ChaosGameProject\ChaosGame\x64\Debug\ChaosGame.exe
