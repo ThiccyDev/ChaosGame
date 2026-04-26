@@ -29,8 +29,10 @@ int main()
 	bool pointsSetUp = false;
 	bool vertexFinished = false;
 
+	int generationPerFrame = 60;
+
 	Font font;
-	font.loadFromFile("fonts\\Jersey25-Regular.ttf");
+	font.loadFromFile("Jersey25-Regular.ttf");
 
 	sf::Text beginText;
 	sf::Text pointText;
@@ -97,7 +99,10 @@ int main()
 			///calculate midpoint between random vertex and the last point in the vector
 			///push back the newly generated coord.
 			
-			GeneratePoint(vertices, points);
+			for (int i = 0; i < generationPerFrame; i++)
+			{
+				GeneratePoint(vertices, points);
+			}
 		}
 
 		/*
@@ -114,7 +119,7 @@ int main()
 		}
 		for (int i = 0; i < vertices.size(); i++)
 		{
-			RectangleShape rect(Vector2f(10, 10));
+			RectangleShape rect(Vector2f(4, 4));
 			rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
 			rect.setFillColor(Color::Blue);
 			window.draw(rect);
@@ -122,7 +127,7 @@ int main()
 		///TODO:  Draw points
 		for (int i = 0; i < points.size(); i++)
 		{
-			RectangleShape rect(Vector2f(10, 10));
+			RectangleShape rect(Vector2f(2, 2));
 			rect.setPosition(Vector2f(points[i].x, points[i].y));
 			rect.setFillColor(Color::Red);
 			window.draw(rect);
