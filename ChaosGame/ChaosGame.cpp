@@ -6,6 +6,10 @@
 #include <vector>
 #include <random>
 
+//Contributers
+//Peter Heimbichner
+//Raj Dash
+
 //Make the code easier to type with "using namespace"
 using namespace sf;
 using namespace std;
